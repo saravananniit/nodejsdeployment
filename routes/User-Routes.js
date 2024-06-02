@@ -29,6 +29,17 @@ router.get('/getAll', async (req, res) => {
     }
 })
 
+router.get('/dummy', async(req, res) => {
+try{
+return res.status(200).json({
+message: 'this is new feature added now'
+})
+}   catch(error){
+        res.status(500).json({message: error.message})
+    }
+})   
+    
+
 //Get by ID Method
 router.get('/getOne/:id', async (req, res) => {
     try{
